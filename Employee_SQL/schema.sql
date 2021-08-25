@@ -81,3 +81,31 @@ m.emp_no=e.emp_no;
 SELECT * FROM manager_name;
 
 --4
+CREATE VIEW department_info AS
+SELECT d.dept_no, d.dept_name, e.emp_no
+FROM Departments AS d
+INNER JOIN Dept_emp AS e ON
+d.dept_no=e.dept_no;
+
+SELECT * FROM department_info;
+
+CREATE VIEW Employee_department_info AS
+SELECT d.dept_name, d.emp_no, e.first_name, e.last_name
+FROM department_info AS d
+INNER JOIN employees AS e ON
+d.emp_no=e.emp_no;
+
+SELECT * FROM Employee_department_info;
+
+--5
+DROP VIEW HERCULES;
+
+CREATE VIEW Hercules AS
+SELECT e.first_name, e.last_name, e.sex
+FROM employees AS e
+WHERE e.first_name = 'Hercules'
+AND e.last_name LIKE 'B%';
+
+SELECT * FROM Hercules;
+
+--6
