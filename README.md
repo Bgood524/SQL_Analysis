@@ -1,6 +1,6 @@
 _**SQL-challenge**_
 
-This repository contains the instructions, a data folder containing csv tables imported into postgresql, and the sql-challenge. Within the sql-challenge folder is a picture and txt file of the DRD setup to create the tables and schema.sql code for the analysis portion of the assignment. 
+This repository contains the instructions, a data folder containing csv tables imported into postgresql, and the sql-challenge. Within the sql-challenge folder is a picture and txt file of the DRD setup to create the tables and schema.sql code for the analysis portion of the assignment. Table schemata and queries are both in the schema.sql file. 
 
 
 _Instructions Below_
