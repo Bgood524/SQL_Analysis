@@ -109,3 +109,14 @@ AND e.last_name LIKE 'B%';
 SELECT * FROM Hercules;
 
 --6
+SELECT * 
+FROM Employee_department_info
+WHERE dept_name = 'Sales';
+
+--7
+SELECT * 
+FROM Employee_department_info
+WHERE dept_name = 'Sales'
+OR dept_name = 'Development';
+
+--8
