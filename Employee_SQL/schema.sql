@@ -120,3 +120,7 @@ WHERE dept_name = 'Sales'
 OR dept_name = 'Development';
 
 --8
+SELECT last_name, COUNT(last_name) AS "Last Name Frequency"
+FROM employees
+GROUP BY last_name
+ORDER BY "Last Name Frequency" DESC;
