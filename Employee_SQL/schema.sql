@@ -46,4 +46,38 @@ CREATE TABLE salaries(
 	FOREIGN KEY (emp_no) REFERENCES employees (emp_no)
 );
 
-Select * FROM employees;
+SELECT * FROM employees;
+
+--1.
+CREATE VIEW employee_salary AS
+Select e.emp_no, e.first_name, e.last_name, e.sex, s.salary
+FROM employees AS e
+INNER JOIN salaries AS s ON
+e.emp_no=s.emp_no;
+
+SELECT * FROM employee_salary;
+
+--2
+SELECT first_name, last_name, hire_date FROM employees
+WHERE date_part('year',hire_date)=1986;
+
+--3 
+DROP VIEW manager_info; 
+
+CREATE VIEW manager_info AS
+SELECT d.dept_no, d.dept_Name, Dept_manager.emp_no
+FROM Departments AS d
+INNER JOIN Dept_manager ON
+d.dept_no=Dept_manager.dept_no;
+
+SELECT * FROM manager_info;
+
+CREATE VIEW manager_name AS
+SELECT m.dept_no, m.dept_name, m.emp_no, e.first_name, e.last_name
+FROM manager_info AS m
+INNER JOIN employees AS e ON
+m.emp_no=e.emp_no;
+
+SELECT * FROM manager_name;
+
+--4
