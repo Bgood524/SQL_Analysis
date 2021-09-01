@@ -4,7 +4,7 @@ This repository contains an analysis of various employees at HP. It contains a d
 
 #### Data Analysis
 
-Once you have a complete database, do the following:
+Each step below can be found in the schema.sql file:
 
 1. List the following details of each employee: employee number, last name, first name, sex, and salary.
 
